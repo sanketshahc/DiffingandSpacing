@@ -17,5 +17,6 @@ class DynamicProgramTable:
 
     def fill(self, **kwargs):
         for cell in self._ordering:
+            # print(cell)
             self._table[cell[0]][cell[1]] = self._fill_cell(self, *cell, **kwargs)
         self.freeze() # Student code shouldn't write to the dynamic programming table after fill() is done.
